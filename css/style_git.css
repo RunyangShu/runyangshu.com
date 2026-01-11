@@ -110,6 +110,28 @@ section {
   margin: 0 auto;
 }
 
+/* Figure block (image + caption) */
+.paper-figure {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.paper-figure .figure {
+  width: 70%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.paper-figure figcaption {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
 .figure {
   width: 10%;
   max-width: 900px;
