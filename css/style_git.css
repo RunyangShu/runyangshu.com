@@ -110,6 +110,16 @@ section {
   margin: 0 auto;
 }
 
+.figure {
+  width: 70%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
