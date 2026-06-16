@@ -8,8 +8,8 @@
 body {
   font-family: "Georgia", "Times New Roman", serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #ffffff;
+  color: #2f3437;
+  background-color: #fbfaf7;
 }
 
 /* Navigation bar */
@@ -18,7 +18,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(31, 35, 37, 0.86);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
   z-index: 100;
 }
 
@@ -26,45 +28,42 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
+  gap: 1.8rem;
+  padding: 0.75rem 1rem;
 }
 
 .navbar li {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 .navbar a {
   color: #f5f5f5;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 0.25rem;
-  transition: color 0.3s ease;
+  font-size: 0.92rem;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #cc5500; /* burnt orange accent color */
+  color: #f1b06a;
 }
 
 /* Hero section */
-/*
- Instead of using an external image for the hero header, this stylesheet
- defines a warm, abstract gradient. The gradient evokes the orange and
- neutral tones seen on the example site while avoiding large binary image
- assets. The gradient flows diagonally from a deeper burnt orange at the
- top left to a soft cream at the bottom right, creating visual interest
- without distracting from the header text.
-*/
 .hero {
-  background-image: linear-gradient(to bottom right, #cc5500 0%, #f5d5a1 100%);
+  background-image:
+    linear-gradient(135deg, rgba(91, 43, 22, 0.92), rgba(167, 72, 28, 0.78) 44%, rgba(228, 184, 126, 0.74)),
+    linear-gradient(45deg, #20282b, #d6a35f);
   background-size: cover;
   background-position: center;
-  height: 35vh;
+  min-height: 360px;
+  height: 42vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   text-align: center;
+  padding: 5.5rem 1.25rem 3rem;
 }
 
 /* overlay to darken the hero area for better text contrast */
@@ -75,130 +74,174 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(20, 23, 24, 0.28);
   z-index: 0;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 900px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
+  font-size: 3.45rem;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0;
 }
 
-.hero.subtitle {
-    font-size: 3.6rem;
-    margin-top: 0.5rem;
-    letter-spacing: 0.05em;
-    opacity: 0.95;
+.hero .subtitle {
+  font-size: 1.3rem;
+  line-height: 1.35;
+  margin-top: 0.5rem;
+  opacity: 0.96;
 }
 
 
 .hero .affiliation {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-style: italic;
+  opacity: 0.92;
+}
+
+.small-hero {
+  min-height: 320px;
+  height: 34vh;
 }
 
 /* General section styling */
 section {
-  padding: 4rem 1rem;
-  max-width: 1000px;
+  padding: 4.5rem 1.5rem;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
+.content-section {
+  max-width: 920px;
+}
+
+.project {
+  padding: 1.4rem 0 2.4rem;
+  border-top: 1px solid #e2ddd4;
+}
+
+.project:first-of-type {
+  border-top: 0;
+  padding-top: 0.5rem;
+}
+
+.paper-meta {
+  margin: 0.15rem 0 1rem;
+  color: #657174;
+}
+
+.paper-abstract {
+  max-width: 76ch;
+  color: #343a3d;
+}
+
 .paper-figure {
-  max-width: 900px;
-  margin: 50px auto;
+  max-width: 880px;
+  margin: 2.35rem auto 3.15rem;
   text-align: center;
 }
 
 .paper-figure img {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;
+  max-width: 860px;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 12px 34px rgba(36, 40, 42, 0.14);
 }
 
 .paper-figure figcaption {
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 12px;
-  line-height: 1.4;
+  max-width: 760px;
+  font-size: 0.92rem;
+  color: #566164;
+  margin: 1rem auto 0;
+  line-height: 1.5;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #cc5500; /* burnt orange */
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: #a44717;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #a03d00;
+  font-size: 1.32rem;
+  line-height: 1.25;
+  margin-top: 1.35rem;
+  margin-bottom: 0.35rem;
+  color: #2f3f42;
 }
 
 /* Intro section */
 .intro-section {
-  background-color: #faf4ef;
+  max-width: none;
+  background-color: #f4efe8;
 }
 
 .intro-container {
+  max-width: 1040px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 2.75rem;
 }
 
 @media (min-width: 768px) {
   .intro-container {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
 .profile-wrapper {
-  flex: 0 0 250px;
+  flex: 0 0 290px;
   text-align: center;
 }
 
 .profile-image {
   width: 100%;
-  max-width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  max-width: 290px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 6px;
+  box-shadow: 0 18px 42px rgba(36, 40, 42, 0.22);
 }
 
 .intro-text {
   flex: 1;
+  max-width: 680px;
 }
 
 .intro-text h2 {
-  margin-bottom: 1rem;
-  color: #a03d00;
+  margin-bottom: 1.1rem;
+  color: #2f3f42;
 }
 
 .intro-text p {
   margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.03rem;
+  line-height: 1.72;
 }
 
 .contact-list {
   list-style: none;
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid #ddd4c9;
 }
 
 .contact-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
 .contact-label {
@@ -207,7 +250,7 @@ h3 {
 }
 
 .contact-list a {
-  color: #cc5500;
+  color: #a44717;
   text-decoration: none;
 }
 
@@ -220,14 +263,15 @@ h3 {
 .teaching-list,
 .comments-list {
   list-style: square;
-  padding-left: 1.25rem;
+  padding-left: 1.35rem;
+  max-width: 76ch;
 }
 
 .research-list li,
 .teaching-list li,
 .comments-list li {
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
+  margin-bottom: 0.85rem;
+  line-height: 1.6;
 }
 
 /* Interests section */
@@ -237,7 +281,7 @@ h3 {
 
 .interest-item h3 {
   margin-bottom: 0.25rem;
-  color: #a03d00;
+  color: #2f3f42;
 }
 
 .interest-item p {
@@ -246,10 +290,59 @@ h3 {
 
 /* Footer styling */
 .footer {
-  background-color: #faf4ef;
+  background-color: #2f3437;
   text-align: center;
-  padding: 1rem;
-  color: #555;
+  padding: 1.25rem;
+  color: #ece7df;
   font-size: 0.9rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 767px) {
+  .navbar ul {
+    gap: 1.1rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .navbar a {
+    font-size: 0.88rem;
+  }
+
+  .hero {
+    min-height: 300px;
+    height: auto;
+    padding: 5rem 1.1rem 2.75rem;
+  }
+
+  .hero h1 {
+    font-size: 2.45rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.05rem;
+  }
+
+  .small-hero {
+    min-height: 255px;
+  }
+
+  section {
+    padding: 3rem 1.1rem;
+  }
+
+  .profile-wrapper {
+    flex-basis: auto;
+  }
+
+  .profile-image {
+    max-width: 230px;
+  }
+
+  h2 {
+    font-size: 1.55rem;
+  }
+
+  h3 {
+    font-size: 1.18rem;
+  }
 }
