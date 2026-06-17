@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Runyang Shu Research | AI for Marketing and Field Experiments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research by Runyang Shu on AI for marketing, interpretable video creative analytics, visual homophily, AI adoption, and field experimentation.">
+    <meta name="description" content="Research by Runyang Shu on interpretable video creative analytics, visual homophily in consumer imagery, AI adoption, AI content moderation, and field experimentation.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://runyangshu.github.io/runyangshu.com/research.html">
     <meta property="og:title" content="Runyang Shu Research">
-    <meta property="og:description" content="Research by Runyang Shu on AI for marketing, video creatives, visual homophily, AI adoption, and field experimentation.">
+    <meta property="og:description" content="Research by Runyang Shu on video creative analytics, visual homophily, AI adoption, AI content moderation, and field experimentation.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://runyangshu.github.io/runyangshu.com/research.html">
     <meta property="og:image" content="https://runyangshu.github.io/runyangshu.com/images/ads_protos.png">
@@ -74,30 +74,17 @@
         <p class="paper-meta"><em>Working Paper</em></p>
 
         <p class="paper-abstract">
-            Video advertisers often have multiple visual assets—such as presenter shots, product demonstrations, usage scenes, text claims, and brand logos—but limited empirical guidance on how to order these assets within a single ad. We develop an interpretable video-analytics framework that represents each ad as a storyboard: an ordered sequence of recurring visual concepts learned from
-video data. Rather than representing ads through opaque embeddings, the
-model groups video frames into a compact vocabulary of recognizable visual
-concepts and uses the resulting concept sequence to predict brand recall. Ap-
-plying the framework to 2,205 real-world video advertisements, we recover
-10 recurring visual concepts, including People Presenting Product, Consumer
-Faces, Product Consumption, Product Descriptions, and Brand Logos. The
-storyboard model approaches the predictive performance of a black-box tem-
-poral transformer while making predictions more interpretable: it identifies
-positions in the ad sequence where each visual concept is most strongly asso-
-ciated with higher predicted recall. We then conduct a controlled experiment
-for our model-guided resequencing. Holding visual clips fixed, the model-
-recommended sequence produces higher brand recall than the original sequence
-and random-sequence controls. Together, the results show how interpretable
-video models can help ad editors diagnose and revise the sequencing of existing
-visual assets.
+            Video advertisers often have multiple visual assets, such as presenter shots, product demonstrations, usage scenes, text claims, and brand logos, but limited empirical guidance on how to order these assets within a single ad. We develop an interpretable video-analytics framework that represents each ad as a storyboard: an ordered sequence of recurring visual concepts learned from video data. Rather than representing ads through opaque embeddings, the model groups video frames into a compact vocabulary of recognizable visual concepts and uses the resulting concept sequence to predict brand recall. Applying the framework to 2,205 real-world video advertisements, we recover a compact set of recurring visual concepts, including People Presenting Product, Consumer Faces, Product Consumption, Product Descriptions, and Brand Logos. The storyboard model approaches the predictive performance of a black-box temporal transformer while making predictions more interpretable: it identifies positions in the ad sequence where each visual concept is most strongly associated with higher predicted recall. We then conduct a controlled experiment to evaluate model-guided resequencing. Holding visual clips fixed, the model-recommended sequence produces higher brand recall than the original sequence and random-sequence controls. Together, the results show how interpretable video models can help ad editors diagnose and revise the sequencing of existing visual assets.
         </p>
 
         <figure class="paper-figure">
             <img src="images/visual_concepts_grid_final.png"
-                 alt="Perceptual model versus baseline recommendations using consumer imagery"
+                 alt="Grid of recurring visual concepts learned from video advertisements"
+                 width="3270"
+                 height="1885"
                  loading="lazy">
             <figcaption>
-                <strong>Figure.</strong> This figure illustrates the 12 recurring visual blocks learned from ad videos (e.g., logo display, product display, call to action, consumer face, transitions). Each sketch shows a representative block, and the percentage indicates how frequently that block appears across the dataset.
+                <strong>Figure.</strong> This figure illustrates the 12 recurring visual blocks learned from ad videos, such as logo display, product display, call to action, consumer face, and transitions. Each sketch shows a representative block, and the percentage indicates how frequently that block appears across the dataset.
             </figcaption>
         </figure>
 
@@ -114,30 +101,14 @@ visual assets.
         <p class="paper-meta"><em>Under review at Journal of Marketing</em></p>
 
         <p class="paper-abstract">
-            Across platforms such as Yelp, TripAdvisor, and Google Reviews, consumers share
-millions of photos capturing what they eat, where they go, and how they experience
-brands. These images are more than decoration; they are expressions of taste. This
-research introduces visual similarity—the degree to which a consumer’s photos resem-
-ble those of a business—as a behavioral signal of preference alignment. Using over
-five million Yelp photos from 20,000 restaurants, we measure two forms of similarity:
-object similarity (what is shown) and aesthetic similarity (how it looks). Both forms
-of similarity predict subsequent five-star evaluations beyond structured attributes, re-
-view text, and image-quality controls. Object similarity is especially informative for
-content such as food, whereas aesthetic similarity is particularly useful when ambiance,
-presentation, and atmosphere are salient. From a managerial perspective, visual simi-
-larity offers a scalable way to incorporate consumer imagery into personalization and
-brand strategy. Platforms can enhance recommendations by matching businesses with
-consumers who “see the world” similarly, while relying less heavily on demographic tar-
-geting. Businesses can use the same logic to assess whether their consumer-generated
-imagery resonates with the audiences they seek to attract. By showing that the vi-
-sual traces consumers leave behind contain preference-relevant information, this work
-reframes consumer photos as actionable behavioral data linking visual expression, pref-
-erence alignment, and marketplace experience.
+            Across platforms such as Yelp, TripAdvisor, and Google Reviews, consumers share millions of photos capturing what they eat, where they go, and how they experience brands. These images are more than decoration; they are expressions of taste. This research introduces visual similarity, the degree to which a consumer's photos resemble those of a business, as a behavioral signal of preference alignment. Using over five million Yelp photos from 20,000 restaurants, we measure two forms of similarity: object similarity (what is shown) and aesthetic similarity (how it looks). Both forms of similarity predict subsequent five-star evaluations beyond structured attributes, review text, and image-quality controls. Object similarity is especially informative for content such as food, whereas aesthetic similarity is particularly useful when ambiance, presentation, and atmosphere are salient. From a managerial perspective, visual similarity offers a scalable way to incorporate consumer imagery into personalization and brand strategy. Platforms can enhance recommendations by matching businesses with consumers who see the world similarly, while relying less heavily on demographic targeting. Businesses can use the same logic to assess whether their consumer-generated imagery resonates with the audiences they seek to attract. By showing that the visual traces consumers leave behind contain preference-relevant information, this work reframes consumer photos as actionable behavioral data linking visual expression, preference alignment, and marketplace experience.
         </p>
 
         <figure class="paper-figure">
             <img src="images/Perceptual_Model_vs_Baseline.png"
-                 alt="Perceptual model versus baseline recommendations using consumer imagery"
+                 alt="Comparison of perceptual model recommendations and baseline models using consumer imagery"
+                 width="4400"
+                 height="2154"
                  loading="lazy">
             <figcaption>
                 <strong>Figure.</strong> Aesthetic similarity can accurately predict consumer preferences beyond traditional attributes such as price, restaurant type, or text.
@@ -147,59 +118,48 @@ erence alignment, and marketplace experience.
     </div>
 
 
-    <!-- ===================== Project 2 (placeholder: same as Project 1) ===================== -->
+    <!-- ===================== Project 2 ===================== -->
     <div class="project">
 
-        <h3>Encouraging Artificial intelligence Adoption: Experimental Evidence from an Educational Platform</h3>
-        <p class="paper-meta"><em>Preparing for Submission to PNAS</em></p>
+        <h3>Encouraging Artificial Intelligence Adoption: Experimental Evidence from an Educational Platform</h3>
+        <p class="paper-meta"><em>Preparing for submission to PNAS</em></p>
 
         <p class="paper-abstract">
-            Gen AI are increasingly embedded in digital platforms, yet their benefits hinge not only on how 
-            many users adopt them but also on who adopts. We study how platforms can steer both adoption 
-            and adopter composition through information design. In a preregistered field experiment conducted 
-            with a large coding-education platform during a nationwide competition (8,819 participants),
-            we randomly vary the introduction message of an in-house AI assistant. We found that emphasizing either downstream 
-            performance gains or privacy protection—layered on an identical baseline capability description—increases 
-            usage by roughly 2.5 percentage points over the 35-day period, but the two imformation have sharply different distributional consequences: performance 
-            imformation disproportionately attracts male students and those from more selective universities, whereas we do not find similar effect for privacy imformation. 
-            These findings contribute to research on technology adoption and information design by showing that usefulness- and trust-oriented framings 
-            can generate similar average adoption gains while meaningfully shifting who participates, highlighting adopter 
-            composition as a first-order outcome in AI settings where interaction data are an input to learning and where equity concerns are salient.
+            Generative AI tools are increasingly embedded in digital platforms, yet their benefits hinge not only on how many users adopt them but also on who adopts them. We study how platforms can steer both adoption and adopter composition through information design. In a preregistered field experiment conducted with a large coding-education platform during a nationwide competition (8,819 participants), we randomly vary the introduction message of an in-house AI assistant. We find that emphasizing either downstream performance gains or privacy protection, layered on an identical baseline capability description, increases usage by roughly 2.5 percentage points over a 35-day period. However, the two information treatments have sharply different distributional consequences: performance information disproportionately attracts male students and students from more selective universities, whereas privacy information does not show a similar effect. These findings contribute to research on technology adoption and information design by showing that usefulness- and trust-oriented framings can generate similar average adoption gains while meaningfully shifting who participates, highlighting adopter composition as a first-order outcome in AI settings where interaction data are an input to learning and where equity concerns are salient.
         </p>
 
         <figure class="paper-figure">
             <img src="images/treatment_effect.png"
-                 alt="Perceptual model versus baseline recommendations using consumer imagery"
+                 alt="Treatment effects of performance and privacy messages on AI assistant adoption"
+                 width="3233"
+                 height="1151"
                  loading="lazy">
             <figcaption>
-                <strong>Figure.</strong> Performance imformation and privacy imformation provided comparable gain in overall adoption (Panel A). However, performance 
-            imformation disproportionately attracts male students and those from more selective universities, whereas we do not find similar effect for privacy imformation (Panel B and C)
+                <strong>Figure.</strong> Performance information and privacy information provide comparable gains in overall adoption (Panel A). However, performance information disproportionately attracts male students and students from more selective universities, whereas privacy information does not show the same pattern (Panels B and C).
             </figcaption>
         </figure>
 
     </div>
 
 
-    <!-- ===================== Project 3 (placeholder: same as Project 1) ===================== -->
+    <!-- ===================== Project 3 ===================== -->
     <div class="project">
 
-        <h3>When Safety Constrains Creativity: Evidenceof AI Content Moderation on User Engagement</h3>
+        <h3>When Safety Constrains Creativity: Evidence of AI Content Moderation on User Engagement</h3>
         <p class="paper-meta"><em>Work in Progress</em></p>
 
         <p class="paper-abstract">
-            As generative AI platforms mature, content moderation policies are tightening in response to legal, copyright, and brand-safety concerns. While stricter moderation
-            enhances compliance and legitimacy, it may simultaneously reduce perceived creative freedom and increase generation 
-            refusals—potentially affecting user engagement and subscription behavior. We study the behavioral and economic 
-            consequences of AI content moderation tightening in partnership with a large technology firm operating a 
-            commercial AI content-generation platform.
+            As generative AI platforms mature, content moderation policies are tightening in response to legal, copyright, and brand-safety concerns. While stricter moderation enhances compliance and legitimacy, it may simultaneously reduce perceived creative freedom and increase generation refusals, potentially affecting user engagement and subscription behavior. We study the behavioral and economic consequences of AI content moderation tightening in partnership with a large technology firm operating a commercial AI content-generation platform.
         </p>
 
         <figure class="paper-figure">
             <img src="images/wanxin.png"
-                 alt="Perceptual model versus baseline recommendations using consumer imagery"
+                 alt="AI content generation platform interface for the content moderation study"
+                 width="1536"
+                 height="1024"
                  loading="lazy">
             <figcaption>
-                <strong>Figure.</strong>
+                <strong>Figure.</strong> AI content-generation platform interface used in the content moderation study.
             </figcaption>
         </figure>
 
@@ -213,5 +173,3 @@ erence alignment, and marketplace experience.
 
 </body>
 </html>
-
-
