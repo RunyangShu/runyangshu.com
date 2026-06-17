@@ -74,19 +74,26 @@
         <p class="paper-meta"><em>Working Paper</em></p>
 
         <p class="paper-abstract">
-            Video advertisements unfold as sequences of creative elements that directors actively design—what to show, in what order, and when to reveal key information such as the product and brand. 
-            Yet actionable guidance remains limited because video is high-dimensional and many existing models rely on latent embeddings 
-            that do not translate into editable creative decisions. We propose an interpretable-by-design framework that represents each 
-            advertisement as a sequence of visual building blocks (e.g., product display, consumer face) drawn from a shared storyboard of 12 recurring 
-            blocks learned across all ads. Applying the method to public datasets with delayed ad-recall outcomes, we show that the 
-            model yields faithful, human-interpretable explanations while achieving predictive performance comparable to black-box video 
-            models and outperforming approaches based on handcrafted features. Finally, we demonstrate the model’s practical value in an experiment 
-            that manipulates storyboard-based creative choices, providing evidence that improving predicted storyboards translates into improved 
-            advertising outcomes.
+            Video advertisers often have multiple visual assets—such as presenter shots, product demonstrations, usage scenes, text claims, and brand logos—but limited empirical guidance on how to order these assets within a single ad. We develop an interpretable video-analytics framework that represents each ad as a storyboard: an ordered sequence of recurring visual concepts learned from
+video data. Rather than representing ads through opaque embeddings, the
+model groups video frames into a compact vocabulary of recognizable visual
+concepts and uses the resulting concept sequence to predict brand recall. Ap-
+plying the framework to 2,205 real-world video advertisements, we recover
+10 recurring visual concepts, including People Presenting Product, Consumer
+Faces, Product Consumption, Product Descriptions, and Brand Logos. The
+storyboard model approaches the predictive performance of a black-box tem-
+poral transformer while making predictions more interpretable: it identifies
+positions in the ad sequence where each visual concept is most strongly asso-
+ciated with higher predicted recall. We then conduct a controlled experiment
+for our model-guided resequencing. Holding visual clips fixed, the model-
+recommended sequence produces higher brand recall than the original sequence
+and random-sequence controls. Together, the results show how interpretable
+video models can help ad editors diagnose and revise the sequencing of existing
+visual assets.
         </p>
 
         <figure class="paper-figure">
-            <img src="images/ads_protos.png"
+            <img src="images/visual_concepts_grid_final.png"
                  alt="Perceptual model versus baseline recommendations using consumer imagery"
                  loading="lazy">
             <figcaption>
