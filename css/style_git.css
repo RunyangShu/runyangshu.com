@@ -118,7 +118,7 @@ section {
 }
 
 .content-section {
-  max-width: 920px;
+  max-width: 1040px;
 }
 
 .project {
@@ -137,19 +137,23 @@ section {
 }
 
 .paper-abstract {
-  max-width: 76ch;
+  max-width: 78ch;
   color: #343a3d;
 }
 
 .paper-figure {
-  max-width: 880px;
-  margin: 2.35rem auto 3.15rem;
+  --figure-width: 840px;
+  --image-width: var(--figure-width);
+  --caption-width: 760px;
+  width: 100%;
+  max-width: var(--figure-width);
+  margin: 2.45rem auto 3.05rem;
   text-align: center;
 }
 
 .paper-figure img {
   width: 100%;
-  max-width: 860px;
+  max-width: var(--image-width);
   height: auto;
   display: block;
   margin: 0 auto;
@@ -158,11 +162,32 @@ section {
 }
 
 .paper-figure figcaption {
-  max-width: 760px;
+  max-width: var(--caption-width);
   font-size: 0.92rem;
   color: #566164;
   margin: 1rem auto 0;
   line-height: 1.5;
+}
+
+.figure-concepts {
+  --figure-width: 860px;
+  --caption-width: 780px;
+}
+
+.figure-model {
+  --figure-width: 820px;
+  --caption-width: 740px;
+}
+
+.figure-treatment {
+  --figure-width: 960px;
+  --caption-width: 820px;
+}
+
+.figure-interface {
+  --figure-width: 700px;
+  --image-width: 680px;
+  --caption-width: 640px;
 }
 
 h2 {
@@ -328,6 +353,31 @@ h3 {
 
   section {
     padding: 3rem 1.1rem;
+  }
+
+  .paper-figure {
+    max-width: 100%;
+    margin: 2rem auto 2.65rem;
+  }
+
+  .paper-figure figcaption {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .figure-treatment {
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    scrollbar-width: thin;
+  }
+
+  .figure-treatment::-webkit-scrollbar {
+    height: 0.45rem;
+  }
+
+  .figure-treatment img {
+    width: 620px;
+    max-width: none;
   }
 
   .profile-wrapper {
